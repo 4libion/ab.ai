@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ab.ai — Обучение через домбру</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css"/>
+        <style>
+            body { font-family: 'Inter', sans-serif; }
+        </style>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    
+    <body class="font-sans text-gray-800">
+        <!-- Navbar -->
+        <header class="bg-white shadow">
+            <div class="container mx-auto flex justify-between items-center py-4 px-6">
+                <a href="#">
+                    <img src="assets/logo.svg" alt="Ab.ai Logo" class="h-10">
+                </a>
+                <nav class="hidden md:flex space-x-8 font-inter font-medium text-gray-900">
+                    <a href="#about" class="hover:text-yellow-600" data-i18n="about">About</a>
+                    <a href="#students" class="hover:text-yellow-600" data-i18n="students">For Students</a>
+                    <a href="#mentors" class="hover:text-yellow-600" data-i18n="mentors">For Mentors</a>
+                </nav>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#register"
+                        class="bg-[#F7C15F] px-6 py-2 rounded-full font-inter font-medium text-gray-900 hover:opacity-90 transition" data-i18n="register">
+                        Register
+                    </a>
+
+                    <div class="relative">
+                        <button id="langBtn"
+                            class="flex items-center space-x-2 bg-[#F7F7F7] px-4 py-2 rounded-full font-inter font-medium text-gray-900">
+                            <span id="langSelected"><span class="fi fi-gb mr-1"></span>Eng</span>
+                            <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+
+                        <div id="langMenu" class="hidden absolute right-0 mt-2 bg-[#F7F7F7] rounded-lg shadow-lg w-32">
+                            <button class="block w-full text-left px-4 py-2 rounded-lg hover:bg-gray-200">
+                                <span class="fi fi-kz"></span> Қаз
+                            </button>
+                            <button class="block w-full text-left px-4 py-2 rounded-lg hover:bg-gray-200">
+                                <span class="fi fi-ru"></span> Рус
+                            </button>
+                            <button class="block w-full text-left px-4 py-2 rounded-lg hover:bg-gray-200">
+                                <span class="fi fi-gb"></span> Eng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="menuToggle" class="md:hidden text-gray-900 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg">
+                <nav class="flex flex-col space-y-4 px-6 py-4 font-inter font-medium text-gray-900">
+                    <a href="#about" class="hover:text-yellow-600" data-i18n="about">About</a>
+                    <a href="#students" class="hover:text-yellow-600" data-i18n="students">For Students</a>
+                    <a href="#mentors" class="hover:text-yellow-600" data-i18n="mentors">For Mentors</a>
+
+                    <a href="#register"
+                        class="bg-[#F7C15F] px-6 py-2 rounded-full text-center font-medium text-gray-900 hover:opacity-90 transition" data-i18n="register">
+                        Register
+                    </a>
+
+                    <div class="relative">
+                        <button id="langBtnMobile"
+                                class="flex items-center justify-between bg-[#F7F7F7] px-4 py-2 rounded-full font-inter font-medium text-gray-900 w-full">
+                            <span id="langSelected"><span class="fi fi-gb mr-1"></span>Eng</span>
+                            <svg class="w-4 h-4 text-gray-700 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="langMenuMobile" class="hidden absolute left-0 mt-2 bg-[#F7F7F7] rounded-lg shadow-lg w-32">
+                            <button class="block w-full text-left px-4 py-2 rounded-lg hover:bg-gray-200">
+                                <span class="fi fi-kz"></span> Қаз
+                            </button>
+                            <button class="block w-full text-left px-4 py-2 rounded-lg hover:bg-gray-200">
+                                <span class="fi fi-ru"></span> Рус
+                            </button>
+                            <button class="block w-full text-left px-4 py-2 rounded-lg hover:bg-gray-200">
+                                <span class="fi fi-gb"></span> Eng
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 items-center gap-12">
+                <!-- Left content -->
+                <div class="space-y-6">
+                    <!-- Heading -->
+                    <h1 class="text-[#000000] text-2xl md:text-4xl font-bold leading-snug" data-i18n="hero_title">
+                        Learning <span class='text-[#F7C15F]'>programming</span><br> through the music of the dombra
+                    </h1>
+                    
+                    <!-- Paragraph 1 -->
+                    <p class="text-lg font-medium text-gray-800 leading-relaxed" data-i18n="hero_sub1">
+                        We made learning code simpler and more fun!<br>
+                        Master programming basics using music<br>
+                        and the rhythm of the dombra.
+                    </p>
+
+                    <!-- Paragraph 2 -->
+                     <p class="text-lg font-medium text-gray-800 leading-relaxed" data-i18n="hero_sub2">
+                        In 2 months you will go through a personal program<br>
+                        where creativity helps you understand logic<br>
+                        and algorithms faster.
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#register" 
+                            class="bg-[#F7C15F] text-gray-900 px-6 py-3 rounded-full font-medium hover:opacity-90 transition" data-i18n="want_to_become">
+                            Want to become a student/mentor
+                        </a>
+                        <a href="#about" 
+                            class="border border-[#F7C15F] text-gray-900 px-6 py-3 rounded-full font-medium hover:bg-[#F7C15F]/10 transition" data-i18n="about">
+                            About
+                        </a>
+                    </div>
+
+                    <!-- Subtext -->
+                    <p class="text-sm font-normal text-gray-800 opacity-50" data-i18n="leave_a_request">
+                        Leave a request and get a guide on how music helps you easily enter the world of IT.
+                    </p>
+                </div>
+
+                <!-- Right image -->
+                <div class="flex justify-center">
+                    <img src="assets/hero_section.svg" alt="Hero illustration" class="max-w-full h-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- Audience -->
+        <section id="audience" class="bg-white py-16">
+            <div class="container mx-auto px-6">
+                <!-- Section title -->
+                <h2 class="text-[#000000] text-2xl md:text-4xl font-bold font-inter text-gray-900 mb-12" data-i18n="audience_title">
+                    This project is for you if you are a:
+                </h2>
+
+                <!-- Cards -->
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div class="bg-[#F7F7F7] rounded-2xl p-6 flex flex-col">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <img src="assets/school.svg" alt="Школьник" class="h-6 w-6">
+                            <h3 class="text-lg font-semibold text-gray-900" data-i18n="audience_1_title">School Student</h3>
+                        </div>
+                        <p class="text-sm text-gray-800 font-normal" data-i18n="audience_1_text">
+                            who wants to learn programming and also learn to play the dombra, developing logic and creativity at the same time
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-[#F7F7F7] rounded-2xl p-6 flex flex-col">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <img src="assets/school.svg" alt="Студент" class="h-6 w-6">
+                            <h3 class="text-lg font-semibold text-gray-900" data-i18n="audience_2_title">College Student</h3>
+                        </div>
+                        <p class="text-sm text-gray-800 font-normal" data-i18n="audience_2_text">
+                            who wants to master a unique combination of skills - coding and musical mastery - to stand out in both IT and creativity
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-[#F7F7F7] rounded-2xl p-6 flex flex-col">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <img src="assets/school.svg" alt="Наставник" class="h-6 w-6">
+                            <h3 class="text-lg font-semibold text-gray-900" data-i18n="audience_3_title">Mentor</h3>
+                        </div>
+                        <p class="text-sm text-gray-800 font-normal" data-i18n="audience_3_text">
+                            who is ready to teach playing the dombra and help students apply musical thinking in programming
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founders -->
+        <section id="founders" class="bg-white py-16">
+            <div class="container mx-auto px-6">
+                <!-- Heading -->
+                <h2 class="text-[#000000] text-2xl md:text-4xl font-bold font-inter text-gray-900 mb-12" data-i18n="founders_title">
+                    Founders of the project
+                </h2>
+
+                <div class="space-y-16">
+                    <!-- Founder 1 -->
+                    <div class="grid md:grid-cols-[70%_30%] gap-12 items-center">
+                        <!-- Text -->
+                        <div class="space-y-6">
+                            <p class="text-base font-normal text-gray-900 leading-relaxed" data-i18n="founders_1_p_1">
+                                I am the founder of the Volunteer Organization "AB Volunteers", and Ab.ai is one of the branches of the organization.
+                            </p>
+                            <p class="text-base font-normal text-gray-900 leading-relaxed" data-i18n="founders_1_p_2">
+                                At the age of 15, I started studying global issues and conducting research. Eventually, I realized that many problems can be solved with the help of technology.
+                            </p>
+                            <p class="text-base font-normal text-gray-900 leading-relaxed" data-i18n="founders_1_p_3">
+                                After the COVID-19 situation, not everyone can afford programming courses. However, there are many talented programmers in our country who can help solve this problem.
+                            </p>
+                            <p class="text-base font-normal text-gray-900 leading-relaxed" data-i18n="founders_1_p_4">
+                                Also, many children got laptops thanks to various programs. I would like to help them in a new direction and develop IT in villages. After school, this would be a good and useful pastime.
+                            </p>
+                            <p class="text-base font-normal text-gray-900 leading-relaxed" data-i18n="founders_1_p_5">
+                                Besides technology, I play the dombra and believe that music can help in learning programming. The rhythm and structure of the kuys are similar to the logic of writing code, and the creative approach helps to better understand complex topics.
+                            </p>
+                        </div>
+
+                        <!-- Image + Name -->
+                        <div class="flex flex-col items-center text-center">
+                            <img src="assets/founder1.png" alt="Жүсіпхан Аманмырза" class="">
+                            <p class="mt-4 text-lg font-medium text-gray-900" data-i18n="founders_1_name">Zhusipkhan Amanmyrza</p>
+                        </div>
+                    </div>
+
+                    <!-- Founder 2 -->
+                    <div class="grid md:grid-cols-[70%_30%] gap-12 items-center">
+                        <!-- Text -->
+                        <div class="space-y-6">
+                            <p class="text-base font-normal text-gray-800 leading-relaxed" data-i18n="founders_2_p_1">
+                                I have been actively involved in programming since I was 13 years old, and I am interested in various areas of this profession, especially problems of artificial intelligence.
+                            </p>
+                            <p class="text-base font-normal text-gray-800 leading-relaxed" data-i18n="founders_2_p_2">
+                                My favorite programming languages ​​are Python, C++ and Java.
+                            </p>
+                            <p class="text-base font-normal text-gray-800 leading-relaxed" data-i18n="founders_2_p_3">
+                                I also really enjoy playing sports, particularly fencing.
+                            </p>
+                            <p class="text-base font-normal text-gray-800 leading-relaxed" data-i18n="founders_2_p_4">
+                                I am a winner of prizes in national competitions and contests in computer science and fencing.
+                            </p>
+                        </div>
+
+                        <!-- Image + Name -->
+                        <div class="flex flex-col items-center text-center">
+                            <img src="assets/founder2.png" alt="Абжанов Алихан" class="">
+                            <p class="mt-4 text-lg font-medium text-gray-900" data-i18n="founders_2_name">Abzhanov Alikhan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="bg-[#F7C15F] py-16">
+            <div class="container mx-auto px-6">
+                <!-- Heading -->
+                <h2 class="text-[#000000] text-2xl md:text-4xl font-bold font-inter text-gray-900 mb-12" data-i18n="about">
+                    About
+                </h2>
+
+                <div class="space-y-16">
+                    <div class="grid md:grid-cols-[60%_40%] gap-12 items-center">
+                        <div class="space-y-6">
+                            <p class="text-base font-medium text-gray-900 leading-relaxed" data-i18n="about_p_1">
+                                Ab.ai is the largest platform for mentored programming training in Kazakhstan. This project unites students and teachers interested in IT from all over the country.
+                            </p>
+                            <p class="text-base font-medium text-gray-900 leading-relaxed" data-i18n="about_p_2">
+                                Ab.ai was created with the aim of popularizing the profession of the future by creating a community of like-minded people. We sincerely believe that Ab.ai will contribute to strengthening the competitiveness of Kazakhstan in the global information technology market.
+                            </p>
+                            <p class="text-base font-medium text-gray-900 leading-relaxed" data-i18n="about_p_3">
+                                The peculiarity of our approach is the use of dombra music as a tool for developing logical thinking, attention and creativity – skills that directly help in learning programming. The rhythm and structure of the kuis are similar to the algorithms in the code, which makes the learning process more understandable and exciting.
+                            </p>
+                            <p class="text-base font-medium text-gray-900 leading-relaxed" data-i18n="about_p_4">
+                                Most importantly, anyone can become part of our community absolutely free of charge, choosing the path of a student or mentor.
+                            </p>
+                        </div>
+
+                        <!-- Image + Name -->
+                        <div class="flex flex-col items-center text-center">
+                            <img src="assets/about_us.svg" alt="About us" class="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-[#000000] text-2xl md:text-4xl font-bold mb-12" data-i18n="benefits">What does the student receive upon completion of the course?</h2>
+                <div class="grid gap-4">
+                    <div class="bg-[#F7F7F7] rounded-2xl p-6 flex">
+                        <div class="flex items-center space-x-3">
+                            <img src="assets/check.svg" alt="Check" class="h-6 w-6">
+                            <h3 class="text-lg font-semibold text-gray-900" data-i18n="benefits_p_1">Strong theoretical basis</h3>
+                        </div>
+                    </div>
+                    <div class="bg-[#F7F7F7] rounded-2xl p-6 flex">
+                        <div class="flex items-center space-x-3">
+                            <img src="assets/check.svg" alt="Check" class="h-6 w-6">
+                            <h3 class="text-lg font-semibold text-gray-900" data-i18n="benefits_p_2">Own projects - from simple to complex</h3>
+                        </div>
+                    </div>
+                    <div class="bg-[#F7F7F7] rounded-2xl p-6 flex">
+                        <div class="flex items-center space-x-3">
+                            <img src="assets/check.svg" alt="Check" class="h-6 w-6">
+                            <h3 class="text-lg font-semibold text-gray-900" data-i18n="benefits_p_3">New acquaintances with like-minded people</h3>
+                        </div>
+                    </div>
+                    <div class="bg-[#F7F7F7] rounded-2xl p-6 flex">
+                        <div class="flex items-center space-x-3">
+                            <img src="assets/check.svg" alt="Check" class="h-6 w-6">
+                            <h3 class="text-lg font-semibold text-gray-900" data-i18n="benefits_p_4">Practical knowledge and skills in the chosen programming area</h3>
+                        </div>
+                    </div>
+                    <div class="bg-[#F7F7F7] rounded-2xl p-6 flex">
+                        <div class="flex items-center space-x-3">
+                            <img src="assets/check.svg" alt="Check" class="h-6 w-6">
+                            <h3 class="text-lg font-semibold text-gray-900" data-i18n="benefits_p_5">A unique learning experience where dombra music accelerates programming</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-[#000000] text-2xl md:text-4xl font-bold mb-12" data-i18n="how_title">How does our platform work?</h2>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-[#F7C15F] rounded-2xl p-6 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <img src="assets/1.svg" alt="One" class="h-16 w-8">
+                        </div>
+                        <p class="text-sm text-gray-800 font-medium" data-i18n="how_p_1">
+                            You register and choose your position (student/mentor)
+                        </p>
+                    </div>
+                    <div class="bg-[#F7C15F] rounded-2xl p-6 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <img src="assets/2.svg" alt="Two" class="h-16 w-12">
+                        </div>
+                        <p class="text-sm text-gray-800 font-medium" data-i18n="how_p_2">
+                            All your information is processed in the database, and we select a student or teacher for you.
+                        </p>
+                    </div>
+                    <div class="bg-[#F7C15F] rounded-2xl p-6 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <img src="assets/3.svg" alt="Three" class="h-16 w-12">
+                        </div>
+                        <p class="text-sm text-gray-800 font-medium" data-i18n="how_p_3">
+                            Throughout the course you will have a supervisor who will help you if necessary.
+                        </p>
+                    </div>
+                </div>
+                <ul class="list-disc px-6 mt-8" data-i18n="how_l">
+                    <li>Some training programs use the <span class="font-bold">“Programming through dombra”</span> method, where musical rhythms and the structure of kuys help to understand the algorithms and logic of the code more easily.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Why Dombyra -->
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-[#000000] text-2xl md:text-4xl font-bold mb-12" data-i18n="why_title">Why is it worth learning programming through dombra?</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="p-4 border-l-4 border-[#F7C15F] rounded-lg">
+                        <h3 class="text-lg font-bold mb-2" data-i18n="why_p1_title">Combines creativity and logic</h3>
+                        <p class="text-sm" data-i18n="why_p1_text">Playing the dombra develops a sense of rhythm and creativity, which helps to understand algorithms and build code more easily.</p>
+                    </div>
+                    <div class="p-4 border-l-4 border-[#F7C15F] rounded-lg">
+                        <h3 class="text-lg font-bold mb-2" data-i18n="why_p2_title">Strengthens memory and attention</h3>
+                        <p class="text-sm" data-i18n="why_p2_text">Learning kuis trains concentration and the ability to work with large amounts of information.</p>
+                    </div>
+                    <div class="p-4 border-l-4 border-[#F7C15F] rounded-lg">
+                        <h3 class="text-lg font-bold mb-2" data-i18n="why_p3_title">Makes learning fun</h3>
+                        <p class="text-sm" data-i18n="why_p3_text">Musical associations help you learn complex topics faster and maintain interest in programming.</p>
+                    </div>
+                    <div class="p-4 border-l-4 border-[#F7C15F] rounded-lg">
+                        <h3 class="text-lg font-bold mb-2" data-i18n="why_p4_title">Develops discipline and teamwork</h3>
+                        <p class="text-sm" data-i18n="why_p4_text">In both an ensemble and a team of programmers, consistency and understanding of the general rhythm are important.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Videos -->
+         <section class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-[#000000] text-2xl md:text-4xl font-bold mb-12" data-i18n="video_title">Videos of playing the dombra</h2>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="p-6 flex flex-col">
+                        <img src="assets/video.svg" alt="Video" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6 flex flex-col">
+                        <img src="assets/video.svg" alt="Video" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6 flex flex-col">
+                        <img src="assets/video.svg" alt="Video" class="h-full w-full object-cover">
+                    </div>
+                </div>
+            </div>
+         </section>
+
+        <!-- Call for Register -->
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="bg-[#F7C15F] rounded-2xl p-12 flex flex-col">
+                    <h2 class="text-2xl md:text-4xl text-[#000000] font-bold mb-8" data-i18n="call_title">Register and get a free guide “How to learn dombra using digital notes”</h2>
+                    <a href="#register"
+                        class="text-lg self-start inline-block w-auto bg-black text-white px-6 py-2 rounded-full font-inter font-medium hover:opacity-90 transition" data-i18n="register">
+                        Register
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- How dombyra helps -->
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-[#000000] text-2xl md:text-4xl font-bold mb-12" data-i18n="dombyra_title">Why dombra helps to learn programming</h2>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="p-6 border-2 border-[#F7C15F] rounded-lg flex flex-col md:flex-row gap-4">
+                        <div class="flex justify-center md:justify-start">
+                            <img src="assets/helper1.svg" alt="helper1" class="h-32 w-32">
+                        </div>
+                        <div class="flex flex-col justify-center text-center md:text-left">
+                            <h3 class="text-[#000000] text-xl font-bold mb-2" data-i18n="dombyra_p_1_title">Combines creativity and logic</h3>
+                            <p class="text-[#000000] text-base font-normal text-gray-900 leading-relaxed" data-i18n="dombyra_p_1_text">
+                                Playing the dombra develops a sense of rhythm and creativity, which helps to understand algorithms and build code more easily.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 border-2 border-[#F7C15F] rounded-lg flex flex-col md:flex-row gap-4">
+                        <div class="flex justify-center md:justify-start">
+                            <img src="assets/helper2.svg" alt="helper1" class="h-32 w-32">
+                        </div>
+                        <div class="flex flex-col justify-center text-center md:text-left">
+                            <h3 class="text-[#000000] text-xl font-bold mb-2" data-i18n="dombyra_p_2_title">Strengthens memory and attention</h3>
+                            <p class="text-[#000000] text-base font-normal text-gray-900 leading-relaxed" data-i18n="dombyra_p_2_text">
+                                Learning kuis trains concentration and the ability to work with large amounts of information.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 border-2 border-[#F7C15F] rounded-lg flex flex-col md:flex-row gap-4">
+                        <div class="flex justify-center md:justify-start">
+                            <img src="assets/helper3.svg" alt="helper1" class="h-32 w-32">
+                        </div>
+                        <div class="flex flex-col justify-center text-center md:text-left">
+                            <h3 class="text-[#000000] text-xl font-bold mb-2" data-i18n="dombyra_p_3_title">Makes learning fun</h3>
+                            <p class="text-[#000000] text-base font-normal text-gray-900 leading-relaxed" data-i18n="dombyra_p_3_text">
+                                Musical associations help you learn complex topics faster and maintain interest in programming.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 border-2 border-[#F7C15F] rounded-lg flex flex-col md:flex-row gap-4">
+                        <div class="flex justify-center md:justify-start">
+                            <img src="assets/helper4.svg" alt="helper1" class="h-32 w-32">
+                        </div>
+                        <div class="flex flex-col justify-center text-center md:text-left">
+                            <h3 class="text-[#000000] text-xl font-bold mb-2" data-i18n="dombyra_p_4_title">Develops discipline and teamwork</h3>
+                            <p class="text-[#000000] text-base font-normal text-gray-900 leading-relaxed" data-i18n="dombyra_p_4_text">
+                                In both an ensemble and a team of programmers, consistency and understanding of the general rhythm are important.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Form -->
+        <section id="register" class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="bg-[#F7C15F] rounded-2xl p-12">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <!-- Form Left Side -->
+                        <div>
+                            <div class="text-center md:text-left">
+                                <h2 class="text-2xl md:text-4xl font-bold font-inter text-[#000000] mb-4" data-i18n="form_title">
+                                    Register to participate in the project
+                                </h2>
+                                <p class="text-base font-medium font-inter text-[#000000] mb-8" data-i18n="form_p">
+                                    Our curators will connect you with a mentor or student
+                                </p>
+                            </div>
+                            <form id="registrationForm" action="#" method="POST" class="space-y-4">
+                                <!-- Name -->
+                                <input type="text" name="name" placeholder="Name Surname" required
+                                    class="w-full px-4 py-3 rounded-lg bg-[#FFFFFF3D] placeholder-black/50 focus:ring-2 focus:ring-black focus:outline-none" data-i18n-placeholder="form_title">
+                                <!-- Email -->
+                                <input type="email" name="email" placeholder="Email" required
+                                    class="w-full px-4 py-3 rounded-lg bg-[#FFFFFF3D] placeholder-black/50 focus:ring-2 focus:ring-black focus:outline-none" data-i18n-placeholder="form_email">
+                                <!-- Place of Study/Work -->
+                                <input type="text" name="place" placeholder="Place of study/work" required
+                                    class="w-full px-4 py-3 rounded-lg bg-[#FFFFFF3D] placeholder-black/50 focus:ring-2 focus:ring-black focus:outline-none" data-i18n-placeholder="form_place">
+                                <!-- Preferred Programming Language -->
+                                <input type="text" name="language" placeholder="Preferred programming language" required
+                                    class="w-full px-4 py-3 rounded-lg bg-[#FFFFFF3D] placeholder-black/50 focus:ring-2 focus:ring-black focus:outline-none" data-i18n-placeholder="form_language">
+                                <!-- Role -->
+                                <input type="text" name="role" placeholder="You are a student/mentor" required
+                                    class="w-full px-4 py-3 rounded-lg bg-[#FFFFFF3D] placeholder-black/50 focus:ring-2 focus:ring-black focus:outline-none" data-i18n-placeholder="form_role">
+                                <!-- Submit Button -->
+                                <div class="flex justify-center md:justify-start">
+                                    <button type="submit"
+                                        class="bg-black text-white px-6 py-3 mt-8 rounded-full font-medium hover:opacity-90 transition flex items-center justify-center space-x-2">
+                                        <span id="btnText" data-i18n="register">Register</span>
+                                        <!-- Hidden spinner -->
+                                        <svg id="spinner" class="animate-spin h-5 w-5 ml-2 text-white hidden"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                            <path class="opacity-75" fill="currentColor"
+                                                d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- Success message -->
+                                <p id="successMsg" class="text-green-700 font-medium mt-4 hidden" data-i18n="success">✅ Your application has been sent!</p>
+                            </form>
+                        </div>
+
+                        <!-- Image Right Side -->
+                        <div class="flex justify-center">
+                            <img src="assets/registration.svg" alt="Registration" class="max-w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black text-white py-12">
+            <div class="container mx-auto px-6 text-center md:text-left">
+                <h2 class="text-2xl md:text-4xl font-bold mb-12" data-i18n="contacts">Contacts</h2>
+                <div class="space-y-4">
+                    <!-- Phones -->
+                    <div class="flex items-center space-x-4">
+                        <img src="assets/phone.svg" alt="Phone" class="w-5 h-5">
+                        <p class="text-base font-normal">
+                            +7 777 472 88 69 &nbsp;&nbsp; | &nbsp;&nbsp; +7 705 279 10 00
+                        </p>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="flex items-center space-x-4">
+                        <img src="assets/email.svg" alt="Email" class="w-5 h-5">
+                        <p class="text-base font-normal">abvolunteers777@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="scripts/translations.js"></script>
+        <script src="scripts/lang.js"></script>
+        <script src="scripts/menu.js"></script>
+        <script src="scripts/spinner.js"></script>
+    </body>
+</html>
