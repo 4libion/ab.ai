@@ -22,17 +22,16 @@ const translations = {
         audience_3_text: "who is ready to teach playing the dombra and help students apply musical thinking in programming",
         
         founders_title: "Founders of the project",
-        founders_1_p_1: 'I am the founder of the Volunteer Organization "AB Volunteers", and Ab.ai is one of the branches of the organization.',
-        founders_1_p_2: "At the age of 15, I started studying global issues and conducting research. Eventually, I realized that many problems can be solved with the help of technology.",
-        founders_1_p_3: "After the COVID-19 situation, not everyone can afford programming courses. However, there are many talented programmers in our country who can help solve this problem.",
-        founders_1_p_4: "Also, many children got laptops thanks to various programs. I would like to help them in a new direction and develop IT in villages. After school, this would be a good and useful pastime.",
-        founders_1_p_5: "Besides technology, I play the dombra and believe that music can help in learning programming. The rhythm and structure of the kuys are similar to the logic of writing code, and the creative approach helps to better understand complex topics.",
-        founders_1_name: "Zhusipkhan Amanmyrza",
+        founders_1_p_1: 'I am the founder of the Volunteer Organization “AB Volunteers”, and Ab.ai is one of its branches. At the age of 15, I began studying global issues and conducting research, and soon realized that many challenges can be solved through technology.',
+        founders_1_p_2: "After COVID-19, not everyone could afford programming courses, yet many talented programmers in our country could contribute. With more children gaining access to laptops, I aim to develop IT education in villages as a meaningful and productive after-school activity.",
+        founders_1_p_3: "Besides technology, I play the dombra and believe that music helps in learning programming - the rhythm and structure of kuys resemble coding logic and foster creativity.",
+        founders_1_p_4: "I am also a prize-winner of several Republican competitions in Kazakhstan, including the “Serper” Festival, the “Atameken” Patriotic Art Contest, and the “Star Bee” Talent Festival. These achievements strengthened my creativity, leadership, and commitment to promoting culture, education, and technology.",
+        founders_1_name: "Amanmyrza Zhussipkhan",
         founders_2_p_1: "I have been actively involved in programming since I was 13 years old, and I am interested in various areas of this profession, especially problems of artificial intelligence.",
         founders_2_p_2: "My favorite programming languages ​​are Python, C++ and Java.",
         founders_2_p_3: "I also really enjoy playing sports, particularly fencing.",
         founders_2_p_4: "I am a winner of prizes in national competitions and contests in computer science and fencing.",
-        founders_2_name: "Abzhanov Alikhan",
+        founders_2_name: "Alikhan Abzhanov",
 
         about_p_1: "Ab.ai is the largest platform for mentored programming training in Kazakhstan. This project unites students and teachers interested in IT from all over the country.",
         about_p_2: "Ab.ai was created with the aim of popularizing the profession of the future by creating a community of like-minded people. We sincerely believe that Ab.ai will contribute to strengthening the competitiveness of Kazakhstan in the global information technology market.",
@@ -84,7 +83,7 @@ const translations = {
         form_language: "Preferred programming language",
         form_role: "You are a student/mentor",
 
-        success: "✅ Your application has been sent!",
+        success: "✅ Your application has been sent! One of our curators will contact you soon.",
 
         contacts: "Contacts",
 
@@ -93,7 +92,7 @@ const translations = {
     ru: {
         about: "О проекте",
         students: "Ученикам",
-        mentors: "Менторам",
+        mentors: "Наставникам",
         
         hero_title: "Обучение <span class='text-[#F7C15F]'>программированию</span><br> через музыку домбры",
         hero_sub1: "Мы сделали изучение кода проще и интереснее!<br> Осваивайте основы программирования, используя музыку<br> и ритм домбры как уникальный метод обучения.",
@@ -101,7 +100,7 @@ const translations = {
         
         register: "Зарегистрироваться",
 
-        want_to_become: "Хочу стать учеником/ментором",
+        want_to_become: "Хочу стать учеником/наставником",
         leave_a_request: "Оставьте заявку и получите гайд, как музыка помогает легко войти в мир IT.",
 
         audience_title: "Этот проект для вас, если вы:",
@@ -113,22 +112,21 @@ const translations = {
         audience_3_text: "который готов обучать игре на домбре и помогать ученикам применять музыкальное мышление в программировании",
 
         founders_title: "Основатели проекта",
-        founders_1_p_1: 'Я являюсь основателем Волонтёрской Организации "AB Volunteers", а Ab.ai является одной из веток организации.',
-        founders_1_p_2: "В 15 лет я начал изучать глобальные проблемы и проводить исследования. В итоге я понял, что многие проблемы решаются с помощью технологий.",
-        founders_1_p_3: "После ситуации с COVID-19 не у всех есть возможность позволить себе курсы по программированию. Тем не менее, в нашей стране много талантливых программистов, которые могут помочь решить эту проблему.",
-        founders_1_p_4: "Также у многих детей появились ноутбуки благодаря различным программам. Я бы хотел помочь им в новом направлении и развивать IT в сёлах. После школьных занятий это было бы хорошим и полезным времяпровождением.",
-        founders_1_p_5: "Помимо технологий, я играю на домбре и верю, что музыка может помочь в изучении программирования. Ритм и структура кюев похожи на логику написания кода, а творческий подход помогает лучше усваивать сложные темы.",
-        founders_1_name: "Жүсипхан Аманмырза",
+        founders_1_p_1: "Я основатель волонтёрской организации «AB Volunteers», и Ab.ai — одно из её отделений. В 15 лет я начал изучать глобальные проблемы и проводить исследования, и вскоре понял, что многие проблемы можно решить с помощью технологий.",
+        founders_1_p_2: "После пандемии COVID-19 не все могли позволить себе курсы программирования, но многие талантливые программисты в нашей стране смогли внести свой вклад. Поскольку всё больше детей получают доступ к ноутбукам, я стремлюсь развивать IT-образование в деревнях как содержательную и продуктивную внешкольную деятельность.",
+        founders_1_p_3: "Помимо технологии, я играю на домбре и считаю, что музыка помогает в освоении программирования — ритм и структура кюев напоминают логику программирования и способствуют развитию творческих способностей.",
+        founders_1_p_4: "Я также являюсь призером нескольких республиканских конкурсов в Казахстане, включая фестиваль «Серпер», конкурс патриотического искусства «Атамекен» и фестиваль талантов «Star Bee». Эти достижения укрепили мои творческие способности, лидерские качества и приверженность продвижению культуры, образования и технологий.",
+        founders_1_name: "Аманмырза Жусипхан",
         founders_2_p_1: "Я активно увлекаюсь программированием с 13 лет, интересуюсь разными направлениями этой профессии, в особенности проблемами искусственного интеллекта.",
         founders_2_p_2: "Больше всего нравятся языки программирования Python, C++ и Java.",
         founders_2_p_3: "Также мне очень нравится заниматься спортом, в частности фехтованием.",
         founders_2_p_4: "Я являюсь обладателем призовых мест в республиканских конкурсах и соревнованиях по информатике и фехтованию.",
-        founders_2_name: "Абжанов Алихан",
+        founders_2_name: "Алихан Абжанов",
 
-        about_p_1: "Ab.ai — крупнейшая в Казахстане платформа для менторского обучения программированию. Этот проект объединяет учеников и учителей, заинтересованных в IT, со всех точек страны.",
+        about_p_1: "Ab.ai — крупнейшая в Казахстане платформа для наставнического обучения программированию. Этот проект объединяет учеников и учителей, заинтересованных в IT, со всех точек страны.",
         about_p_2: "Ab.ai был создан с целью популяризации профессии будущего путём создания сообщества единомышленников. Мы искренне верим, что Ab.ai будет способствовать усилению конкурентоспособности Казахстана на мировом рынке информационных технологий.",
         about_p_3: "Особенностью нашего подхода является использование музыки домбры как инструмента для развития логического мышления, внимания и креативности – навыков, которые напрямую помогают в изучении программирования. Ритм и структура кюев схожи с алгоритмами в коде, что делает процесс обучения более понятным и увлекательным.",
-        about_p_4: "Самое главное, любой желающий может стать частью нашего сообщества абсолютно бесплатно, выбрав путь ученика или ментора.",
+        about_p_4: "Самое главное, любой желающий может стать частью нашего сообщества абсолютно бесплатно, выбрав путь ученика или наставника.",
         
         benefits: "Что получает ученик по окончании курса?",
         benefits_p_1: "Крепкая теоретическая база",
@@ -138,7 +136,7 @@ const translations = {
         benefits_p_5: "Уникальный опыт обучения, где музыка домбры ускоряют освоение программирования",
 
         how_title: "Как работает наша платформа?",
-        how_p_1: "Вы проходите регистрацию и выбираете свою позицию (ученик/ментор)",
+        how_p_1: "Вы проходите регистрацию и выбираете свою позицию (ученик/наставник)",
         how_p_2: "Вся ваша информация обрабатывается в базе данных, и мы подбираем вам ученика или учителя",
         how_p_3: "В течение всего курса с вами будет куратор, который поможет при необходимости",
         how_l: 'В некоторых программах обучения используется метод <span class="font-bold">“Программирование через домбру”,</span> где музыкальные ритмы и структура кюев помогают проще понять алгоритмы и логику кода',
@@ -168,14 +166,14 @@ const translations = {
         dombyra_p_4_text: "Как в ансамбле, так и в команде программистов важны согласованность и понимание общего ритма.",
 
         form_title: "Зарегистрируйтесь на участие в проекте",
-        form_p: "Наши кураторы свяжут вас с ментором или учеником",
+        form_p: "Наши кураторы свяжут вас с наставником или учеником",
         form_name: "Имя Фамилия",
         form_email: "Почта",
         form_place: "Место обучения/работы",
         form_language: "Желаемый язык программирования",
-        form_role: "Вы ученик/ментор",
+        form_role: "Вы ученик/наставник",
 
-        success: "✅ Ваша заявка отправлена!",
+        success: "✅ Ваша заявка отправлена! Скоро с вами свяжется один из наших кураторов.",
 
         contacts: "Контакты",
 
@@ -184,15 +182,15 @@ const translations = {
     kz: {
         about: "Жоба туралы",
         students: "Оқушыларға",
-        mentors: "Менторларға",
+        mentors: "Тәлімгерлерге",
 
         hero_title: "Домбыра әуені арқылы <span class='text-[#F7C15F]'>бағдарламалауды</span><br> үйрену",
-        hero_sub1: "Кодтауды жеңіл әрі қызықты еттік!<br> Бағдарламалау негіздерін музыка<br> мен домбыра ырғағы арқылы меңгеріңіз.",
+        hero_sub1: "Бағдарламалауды жеңіл әрі қызықты еттік!<br> Бағдарламалау негіздерін музыка<br> мен домбыра ырғағы арқылы меңгеріңіз.",
         hero_sub2: "2 ай ішінде жеке бағдарлама бойынша өтесіз,<br> шығармашылық көзқарас логиканы<br> және алгоритмдерді тезірек түсінуге көмектеседі.",
         
         register: "Тіркелу",
         
-        want_to_become: "Оқушы/ментор болғым келеді",
+        want_to_become: "Оқушы/тәлімгер болғым келеді",
         leave_a_request: "Өтінім қалдырып, музыканың IT әлеміне оңай кіруге қалай көмектесетінін біліп алыңыз.",
         
         audience_title: "Бұл жоба кімге арналған?:",
@@ -204,17 +202,16 @@ const translations = {
         audience_3_text: "домбырада ойнауды үйретуге және студенттерге музыкалық ойлауды бағдарламалауда қолдануға көмектесуге дайын тәлімгерге",
         
         founders_title: "Жобаның негізін қалаушылар",
-        founders_1_p_1: 'Мен «AB Volunteers» еріктілер ұйымының негізін қалаушымын, ал Ab.ai ұйымның филиалдарының бірі.',
-        founders_1_p_2: "15 жасымда жаһандық мәселелерді зерттеп, зерттеу жұмыстарын жүргізе бастадым. Ақырында мен көп мәселені технологияның көмегімен шешуге болатынын түсіндім.",
-        founders_1_p_3: "COVID-19 жағдайынан кейін бағдарламалау курстарын әркімнің қалтасы көтере бермейді. Дегенмен, елімізде бұл мәселені шешуге көмектесетін талантты бағдарламашылар көп.",
-        founders_1_p_4: "Сондай-ақ, көптеген балалар әртүрлі бағдарламалардың арқасында ноутбукке ие болды. Оларға жаңа бағытта көмектесіп, ауылдарда ІТ-ті дамытқым келеді. Мектептен кейін бұл жақсы және пайдалы уақыт өткізу болар еді.",
-        founders_1_p_5: "Технологиядан басқа, мен домбыра тартамын және музыканың бағдарламалауды үйренуге көмектесетініне сенемін. Күйлердің ырғағы мен құрылымы код жазу логикасына ұқсас, ал шығармашылық тәсіл күрделі тақырыптарды жақсы түсінуге көмектеседі.",
-        founders_1_name: "Жүсіпхан Аманмырза",
+        founders_1_p_1: "Мен «AB Volunteers» еріктілер ұйымының негізін қалаушымын, ал Ab.ai ұйымның филиалдарының бірі. Мен 15 жасымда жаһандық мәселелерді зерттеп, зерттеулер жүргізе бастадым, көп ұзамай-ақ көптеген қиындықтарды технология арқылы шешуге болатынын түсіндім.",
+        founders_1_p_2: "COVID-19-дан кейін бағдарламалау курстарына бәрінің қалтасы көтермеді. Дегенмен еліміздегі талантты бағдарламаушылар өз үлесін қосты. Көптеген балалар ноутбуктерге қол жеткізе алатындықтан, мен мектептен кейінгі мазмұнды және нәтижелі іс-шара ретінде ауылдарда IT-білім беруді дамытуды мақсат етемін.",
+        founders_1_p_3: "Технологиядан басқа мен домбыра тартамын және музыка бағдарламалауды үйренуге көмектеседі деп есептеймін. Күйдің ырғағы мен құрылымы бағдарламалау логикасына ұқсайды және шығармашылықты дамытады.",
+        founders_1_p_4: "Сондай-ақ Қазақстанда өткен бірнеше республикалық байқаулардың, соның ішінде «Серпер» фестивалінің, «Атамекен» патриоттық өнер байқауының, «Star Bee» таланттар фестивалінің жүлдегерімін. Бұл жетістіктер менің шығармашылығымды, көшбасшылығымды және мәдениетті, білім мен технологияны ілгерілетуге деген ұмтылысымды күшейтті.",
+        founders_1_name: "Аманмырза Жүсіпхан",
         founders_2_p_1: "Мен 13 жасымнан бастап бағдарламалаумен белсенді айналысамын және осы мамандықтың әртүрлі салаларына, әсіресе жасанды интеллект мәселелеріне қызығамын.",
         founders_2_p_2: "Менің сүйікті бағдарламалау тілдерім - Python, C++ және Java.",
         founders_2_p_3: "Сондай-ақ спортпен айналысқанды ұнатамын, әсіресе семсерлесу.",
         founders_2_p_4: "Мен информатика және семсерлесу бойынша республикалық жарыстар мен сайыстардың жүлдегерімін.",
-        founders_2_name: "Абжанов Алихан",
+        founders_2_name: "Алихан Абжанов",
 
         about_p_1: "Ab.ai – Қазақстандағы тәлімгерлік бағдарламалау бойынша оқытудың ең үлкен платформасы. Бұл жоба еліміздің түкпір-түкпірінен IT саласына қызығушылық танытқан студенттер мен мұғалімдерді біріктіреді.",
         about_p_2: "Ab.ai пікірлестер қауымын құру арқылы болашақ кәсіпті танымал ету мақсатында құрылған. Біз Ab.ai Қазақстанның әлемдік ақпараттық технологиялар нарығындағы бәсекеге қабілеттілігін нығайтуға өз үлесін қосатынына шын жүректен сенеміз.",
@@ -266,7 +263,7 @@ const translations = {
         form_language: "Таңдалған бағдарламалау тілі",
         form_role: "Сіз оқушысыз/тәлімгерсіз",
 
-        success: "✅ Сіздің өтінішіңіз жіберілді!",
+        success: "✅ Сіздің өтінішіңіз жіберілді! Жақында жетекшілеріміздің бірі сізбен байланысады.",
 
         contacts: "Контактілер",
 

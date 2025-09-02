@@ -20,10 +20,10 @@
                 <a href="#">
                     <img src="assets/logo.svg" alt="Ab.ai Logo" class="h-10">
                 </a>
-                <nav class="hidden md:flex space-x-8 font-inter font-medium text-gray-900">
+                <nav class="hidden md:flex gap-x-4 md:gap-x-6 lg:gap-x-32 font-inter font-medium text-gray-900">
                     <a href="#about" class="hover:text-yellow-600" data-i18n="about">About</a>
-                    <a href="#students" class="hover:text-yellow-600" data-i18n="students">For Students</a>
-                    <a href="#mentors" class="hover:text-yellow-600" data-i18n="mentors">For Mentors</a>
+                    <a href="#benefits" class="hover:text-yellow-600" data-i18n="students">For Students</a>
+                    <a href="#register" class="hover:text-yellow-600" data-i18n="mentors">For Mentors</a>
                 </nav>
                 <div class="hidden md:flex items-center space-x-4">
                     <a href="#register"
@@ -63,8 +63,8 @@
             <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg">
                 <nav class="flex flex-col space-y-4 px-6 py-4 font-inter font-medium text-gray-900">
                     <a href="#about" class="hover:text-yellow-600" data-i18n="about">About</a>
-                    <a href="#students" class="hover:text-yellow-600" data-i18n="students">For Students</a>
-                    <a href="#mentors" class="hover:text-yellow-600" data-i18n="mentors">For Mentors</a>
+                    <a href="#benefits" class="hover:text-yellow-600" data-i18n="students">For Students</a>
+                    <a href="#register" class="hover:text-yellow-600" data-i18n="mentors">For Mentors</a>
 
                     <a href="#register"
                         class="bg-[#F7C15F] px-6 py-2 rounded-full text-center font-medium text-gray-900 hover:opacity-90 transition" data-i18n="register">
@@ -74,7 +74,7 @@
                     <div class="relative">
                         <button id="langBtnMobile"
                                 class="flex items-center justify-between bg-[#F7F7F7] px-4 py-2 rounded-full font-inter font-medium text-gray-900 w-full">
-                            <span id="langSelected"><span class="fi fi-gb mr-1"></span>Eng</span>
+                            <span id="langSelectedMobile"><span class="fi fi-gb mr-1"></span>Eng</span>
                             <svg class="w-4 h-4 text-gray-700 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>
@@ -204,26 +204,31 @@
                         <!-- Text -->
                         <div class="space-y-6">
                             <p class="text-base font-normal text-gray-900 leading-relaxed" data-i18n="founders_1_p_1">
-                                I am the founder of the Volunteer Organization "AB Volunteers", and Ab.ai is one of the branches of the organization.
+                                I am the founder of the Volunteer Organization "AB Volunteers", and Ab.ai is one of its branches. At the age of 15, I began studying global issues and conducting research, and soon realized that many challenges can be solved through technology.
                             </p>
-                            <p class="text-base font-normal text-gray-900 leading-relaxed" data-i18n="founders_1_p_2">
+                            <!-- <p class="text-base font-normal text-gray-900 leading-relaxed" data-i18n="founders_1_p_2">
                                 At the age of 15, I started studying global issues and conducting research. Eventually, I realized that many problems can be solved with the help of technology.
-                            </p>
-                            <p class="text-base font-normal text-gray-900 leading-relaxed" data-i18n="founders_1_p_3">
+                            </p> -->
+                            <p class="text-base font-normal text-gray-900 leading-relaxed" data-i18n="founders_1_p_2">
+                                After COVID-19, not everyone could afford programming courses, yet many talented programmers in our country could contribute. With more children gaining access to laptops, I aim to develop IT education in villages as a meaningful and productive after-school activity.
+                            <!-- <p class="text-base font-normal text-gray-900 leading-relaxed" data-i18n="founders_1_p_3">
                                 After the COVID-19 situation, not everyone can afford programming courses. However, there are many talented programmers in our country who can help solve this problem.
+                            </p> -->
+                            <p class="text-base font-normal text-gray-900 leading-relaxed" data-i18n="founders_1_p_3">
+                                Besides technology, I play the dombra and believe that music helps in learning programming - the rhythm and structure of kuys resemble coding logic and foster creativity.
                             </p>
-                            <p class="text-base font-normal text-gray-900 leading-relaxed" data-i18n="founders_1_p_4">
+                            <!-- <p class="text-base font-normal text-gray-900 leading-relaxed" data-i18n="founders_1_p_4">
                                 Also, many children got laptops thanks to various programs. I would like to help them in a new direction and develop IT in villages. After school, this would be a good and useful pastime.
-                            </p>
-                            <p class="text-base font-normal text-gray-900 leading-relaxed" data-i18n="founders_1_p_5">
-                                Besides technology, I play the dombra and believe that music can help in learning programming. The rhythm and structure of the kuys are similar to the logic of writing code, and the creative approach helps to better understand complex topics.
+                            </p> -->
+                            <p class="text-base font-normal text-gray-900 leading-relaxed" data-i18n="founders_1_p_4">
+                                I am also a prize-winner of several Republican competitions in Kazakhstan, including the “Serper” Festival, the “Atameken” Patriotic Art Contest, and the “Star Bee” Talent Festival. These achievements strengthened my creativity, leadership, and commitment to promoting culture, education, and technology.
                             </p>
                         </div>
 
                         <!-- Image + Name -->
                         <div class="flex flex-col items-center text-center">
                             <img src="assets/founder1.png" alt="Жүсіпхан Аманмырза" class="">
-                            <p class="mt-4 text-lg font-medium text-gray-900" data-i18n="founders_1_name">Zhusipkhan Amanmyrza</p>
+                            <p class="mt-4 text-lg font-medium text-gray-900" data-i18n="founders_1_name">Amanmyrza Zhussipkhan</p>
                         </div>
                     </div>
 
@@ -248,7 +253,7 @@
                         <!-- Image + Name -->
                         <div class="flex flex-col items-center text-center">
                             <img src="assets/founder2.png" alt="Абжанов Алихан" class="">
-                            <p class="mt-4 text-lg font-medium text-gray-900" data-i18n="founders_2_name">Abzhanov Alikhan</p>
+                            <p class="mt-4 text-lg font-medium text-gray-900" data-i18n="founders_2_name">Alikhan Abzhanov</p>
                         </div>
                     </div>
                 </div>
@@ -290,7 +295,7 @@
         </section>
 
         <!-- Benefits -->
-        <section class="py-16">
+        <section id="benefits" class="py-16">
             <div class="container mx-auto px-6">
                 <h2 class="text-[#000000] text-2xl md:text-4xl font-bold mb-12" data-i18n="benefits">What does the student receive upon completion of the course?</h2>
                 <div class="grid gap-4">
@@ -396,14 +401,29 @@
                 <h2 class="text-[#000000] text-2xl md:text-4xl font-bold mb-12" data-i18n="video_title">Videos of playing the dombra</h2>
 
                 <div class="grid md:grid-cols-3 gap-6">
-                    <div class="p-6 flex flex-col">
-                        <img src="assets/video.svg" alt="Video" class="h-full w-full object-cover">
+                    <div class="aspect-video">
+                        <iframe
+                        class="w-full h-full rounded-lg"
+                        src="https://www.youtube.com/embed/1w4vcB9xh6o"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                     </div>
-                    <div class="p-6 flex flex-col">
-                        <img src="assets/video.svg" alt="Video" class="h-full w-full object-cover">
+                    <div class="aspect-video">
+                        <iframe
+                        class="w-full h-full rounded-lg"
+                        src="https://www.youtube.com/embed/w8ep_2VPIDM"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                     </div>
-                    <div class="p-6 flex flex-col">
-                        <img src="assets/video.svg" alt="Video" class="h-full w-full object-cover">
+                    <div class="aspect-video">
+                        <iframe
+                        class="w-full h-full rounded-lg"
+                        src="https://www.youtube.com/embed/C-uulPY8xmw"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -494,7 +514,7 @@
                             <form id="registrationForm" action="#" method="POST" class="space-y-4">
                                 <!-- Name -->
                                 <input type="text" name="name" placeholder="Name Surname" required
-                                    class="w-full px-4 py-3 rounded-lg bg-[#FFFFFF3D] placeholder-black/50 focus:ring-2 focus:ring-black focus:outline-none" data-i18n-placeholder="form_title">
+                                    class="w-full px-4 py-3 rounded-lg bg-[#FFFFFF3D] placeholder-black/50 focus:ring-2 focus:ring-black focus:outline-none" data-i18n-placeholder="form_name">
                                 <!-- Email -->
                                 <input type="email" name="email" placeholder="Email" required
                                     class="w-full px-4 py-3 rounded-lg bg-[#FFFFFF3D] placeholder-black/50 focus:ring-2 focus:ring-black focus:outline-none" data-i18n-placeholder="form_email">
@@ -544,14 +564,14 @@
                     <div class="flex items-center space-x-4">
                         <img src="assets/phone.svg" alt="Phone" class="w-5 h-5">
                         <p class="text-base font-normal">
-                            +7 777 472 88 69 &nbsp;&nbsp; | &nbsp;&nbsp; +7 705 279 10 00
+                            +1 929 633 5418 &nbsp;&nbsp; | &nbsp;&nbsp; +7 777 472 8869
                         </p>
                     </div>
 
                     <!-- Email -->
                     <div class="flex items-center space-x-4">
                         <img src="assets/email.svg" alt="Email" class="w-5 h-5">
-                        <p class="text-base font-normal">abvolunteers777@gmail.com</p>
+                        <p class="text-base font-normal">amanmyrza.k.zhussipkhan@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -561,5 +581,6 @@
         <script src="scripts/lang.js"></script>
         <script src="scripts/menu.js"></script>
         <script src="scripts/spinner.js"></script>
+        <script src="scripts/scroll.js"></script>
     </body>
 </html>

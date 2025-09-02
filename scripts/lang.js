@@ -1,5 +1,6 @@
 function updateLangSelected(lang) {
     const langSelected = document.querySelectorAll("#langSelected");
+    const langSelectedMobile = document.querySelectorAll("#langSelectedMobile")
     let html = "";
 
     if (lang === "kz") html = `<span class="fi fi-kz mr-1"></span>Қаз`;
@@ -7,6 +8,7 @@ function updateLangSelected(lang) {
     if (lang === "en") html = `<span class="fi fi-gb mr-1"></span>Eng`;
 
     langSelected.forEach(el => el.innerHTML = html);
+    langSelectedMobile.forEach(el => el.innerHTML = html);
 }
 
 function setLanguage(lang) {
