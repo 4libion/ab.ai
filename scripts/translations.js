@@ -84,6 +84,7 @@ const translations = {
         form_role: "You are a student/mentor",
 
         success: "✅ Your application has been sent! One of our curators will contact you soon.",
+        error: "❌ Could not send the application. Please try again or email us.",
 
         contacts: "Contacts",
 
@@ -174,6 +175,7 @@ const translations = {
         form_role: "Вы ученик/наставник",
 
         success: "✅ Ваша заявка отправлена! Скоро с вами свяжется один из наших кураторов.",
+        error: "❌ Не удалось отправить заявку. Попробуйте ещё раз или напишите нам на почту.",
 
         contacts: "Контакты",
 
@@ -264,6 +266,7 @@ const translations = {
         form_role: "Сіз оқушысыз/тәлімгерсіз",
 
         success: "✅ Сіздің өтінішіңіз жіберілді! Жақында жетекшілеріміздің бірі сізбен байланысады.",
+        error: "❌ Өтінішті жіберу мүмкін болмады. Қайталап көріңіз немесе бізге поштаға жазыңыз.",
 
         contacts: "Контактілер",
 
